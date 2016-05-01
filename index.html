@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>YOSRA</title>
+
+    <link href="vendors/bootgrid/jquery.bootgrid.min.css'" rel="stylesheet">
+    <link href="vendors/bower_components/animate.css/animate.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/sweetalert/dist/sweetalert-override.min.css" rel="stylesheet">
+    <link href="vendors/bower_components/material-design-iconic-font/css/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="vendors/socicon/socicon.min.css" rel="stylesheet">
+    <link href="vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="css/app.min.1.css" rel="stylesheet">
+    <link href="css/app.min.2.css" rel="stylesheet">
+
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="modal fade" id="main-modal" tabindex="-1" role="dialog" aria-labelledby="Modal">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title"></h4>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary btn-modal">Save</button>
+            </div>
+        </div><!-- /.modal-content -->
+    </div>
+</div>
+
+    <header id="header">
+    <ul class="header-inner">
+        <li id="menu-trigger" data-trigger="#sidebar">
+            <div class="line-wrap">
+                <div class="line top"></div>
+                <div class="line center"></div>
+                <div class="line bottom"></div>
+            </div>
+        </li>
+
+        <li class="logo">
+            <a href="#"><img src="img/logo.png" alt="Gakko"></a>
+        </li>
+
+        <li class="pull-right">
+            <ul class="top-menu">
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="tm-message" href="#"><i class="tmn-counts">3</i></a>
+                    <div class="dropdown-menu dropdown-menu-lg pull-right">
+                        <div class="listview">
+                            <div class="lv-header">
+                                Messages
+                            </div>
+                            <div class="lv-body c-overflow">
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="//placehold.it/60x60" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">David Belle</div>
+                                            <small class="lv-small">Cum sociis natoque penatibus et magnis dis parturient montes</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="//placehold.it/60x60" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">Jonathan Morris</div>
+                                            <small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="//placehold.it/60x60" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">Fredric Mitchell Jr.</div>
+                                            <small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <a class="lv-footer" href="#">View All</a>
+                        </div>
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="tm-notification" href="#"><i class="tmn-counts">9</i></a>
+                    <div class="dropdown-menu dropdown-menu-lg pull-right">
+                        <div class="listview" id="notifications">
+                            <div class="lv-header">
+                                Notification
+
+                                <ul class="actions">
+                                    <li class="dropdown">
+                                        <a href="#" data-clear="notification">
+                                            <i class="md md-done-all"></i>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="lv-body c-overflow">
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="img/profile-pics/1.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">David Belle</div>
+                                            <small class="lv-small">Cum sociis natoque penatibus et magnis dis parturient montes</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="img/profile-pics/2.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">Jonathan Morris</div>
+                                            <small class="lv-small">Nunc quis diam diamurabitur at dolor elementum, dictum turpis vel</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="img/profile-pics/3.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">Fredric Mitchell Jr.</div>
+                                            <small class="lv-small">Phasellus a ante et est ornare accumsan at vel magnauis blandit turpis at augue ultricies</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">Glenn Jecobs</div>
+                                            <small class="lv-small">Ut vitae lacus sem ellentesque maximus, nunc sit amet varius dignissim, dui est consectetur neque</small>
+                                        </div>
+                                    </div>
+                                </a>
+                                <a class="lv-item" href="#">
+                                    <div class="media">
+                                        <div class="pull-left">
+                                            <img class="lv-img-sm" src="img/profile-pics/4.jpg" alt="">
+                                        </div>
+                                        <div class="media-body">
+                                            <div class="lv-title">Bill Phillips</div>
+                                            <small class="lv-small">Proin laoreet commodo eros id faucibus. Donec ligula quam, imperdiet vel ante placerat</small>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                            <a class="lv-footer" href="#">View Previous</a>
+                        </div>
+
+                    </div>
+                </li>
+                <li class="dropdown">
+                    <a data-toggle="dropdown" class="tm-settings" href="#"></a>
+                    <ul class="dropdown-menu dm-icon pull-right">
+                        <li>
+                            <a data-action="fullscreen" href="#"><i class="md md-fullscreen"></i> Toggle Fullscreen</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.settings') }}"><i class="md md-settings"></i> School Settings</a>
+                        </li>
+                        <li>
+                            <a href="{{ route('admin.logout') }}"><i class="md md-exit-to-app"></i> Logout</a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+        <li class="pull-right datetime hidden-xs"><i class="fa fa-clock-o"></i> <?= date('D d, H:i')?></li>
+    </ul>
+
+
+</header>
+
+
+<section id="main">
+
+   
+   <aside id="sidebar">
+    <div class="sidebar-inner c-overflow">
+        <ul class="main-menu">
+            <li><a href="#"><i class="md md-dashboard"></i> Dashboard</a></li>
+            <li><a href="#"><i class="md md-tune"></i> TimeTables</a></li>
+            <li><a href="#"><i class="md md-group"></i> Classes</a></li>
+            <li><a href="#"><i class="md md-person"></i> Users</a></li>
+            <li><a href="#"><i class="md md-assignment"></i> Attendances</a></li>
+            <li><a href="#"><i class="md md-create"></i> Exams</a></li>
+            <li><a href="#"><i class="md md-my-library-books"></i> News</a></li>
+            <li><a href="#"><i class="md md-alarm"></i> Events</a></li>
+            <li><a href="#"><i class="md md-room"></i> Classrooms</a></li>
+            <li><a href="#"><i class="md md-subject"></i> Subjects</a></li>
+            <li><a href="#"><i class="md  md-trending-up"></i> Levels</a></li>
+            <li class="sub-menu">
+                <a href="#"><i class="md md-local-restaurant"></i> Canteen</a>
+                <ul>
+                    <li><a href="#">Dishes</a></li>
+                    <li><a href="#">Menus</a></li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+</aside>
+
+    <section id="content">
+        <div class="container">
+          
+
+
+
+    <div class="row">
+        <div class="col-md-6">
+            <div class="card">
+                <div class="card-header">
+                    <h2><i class="fa fa-user"></i> Users</h2>
+
+                    <ul class="actions">
+                        <li class="dropdown action-show">
+                            <a href="#" data-toggle="dropdown">
+                                <i class="md md-more-vert"></i>
+                            </a>
+
+                            <ul class="dropdown-menu pull-right">
+                               <li><a href="#">Show users</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="card-body card-padding">
+                    <canvas id="users-chart" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+  
+
+          
+        </div>
+    </section>
+
+</section>
+
+<footer id="footer">
+    Copyright &copy; 2016 YOSRA GOGNOS
+
+    <ul class="f-menu">
+        <li><a href="#">Dashboard</a></li>
+        <li><a href="#">Settings</a></li>
+        <li><a href="#">Logout</a></li>
+    </ul>
+</footer>
+
+<script src="vendors/bower_components/jquery/dist/jquery.min.js"></script>
+<script src="vendors/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="vendors/bower_components/jquery.nicescroll/jquery.nicescroll.min.js"></script>
+<script src="vendors/bower_components/Waves/dist/waves.min.js"></script>
+<script src="vendors/bootstrap-growl/bootstrap-growl.min.js"></script>
+<script src="vendors/bower_components/sweetalert/dist/sweetalert.min.js"></script>
+<script src="vendors/bootgrid/jquery.bootgrid.min.js"></script>
+
+<script src="js/functions.js"></script>
+<script src="js/script.js"></script>
+ <script src="js/Chart.min.js"></script>
+ 
+    <script>
+        $(function() {
+            Chart.defaults.global.responsive = true;
+
+            var pieData = [
+                {
+                    value: <?= 10 ?>,
+                    color:"#F7464A",
+                    highlight: "#FF5A5E",
+                    label: "Students"
+                },
+                {
+                    value: <?= 10 ?>,
+                    color: "#46BFBD",
+                    highlight: "#5AD3D1",
+                    label: "Teachers"
+                },
+                {
+                    value: <?= 2 ?>,
+                    color: "#949FB1",
+                    highlight: "#A8B3C5",
+                    label: "Admins"
+                },
+                {
+                    value: <?= 3?>,
+                    color: "#4D5360",
+                    highlight: "#616774",
+                    label: "Parents"
+                }
+
+            ];
+
+        
+
+             window.onload = function(){
+                var ctx = document.getElementById("users-chart").getContext("2d");
+                window.myPie = new Chart(ctx).Pie(pieData);
+            };
+
+        });
+    </script>
+
+
+</body>
+</html>
